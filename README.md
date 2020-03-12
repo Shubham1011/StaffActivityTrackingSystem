@@ -1,2 +1,2 @@
-# StaffActvityTrackingSystem
+# StaffActivityTrackingSystem
 Assignment
