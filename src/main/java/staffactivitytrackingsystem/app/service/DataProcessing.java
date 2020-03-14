@@ -33,7 +33,11 @@ public class DataProcessing {
 
     List<String> validactivities=new ArrayList<String>(Arrays.asList("login","logout","teabreak","lunchbreak","gamemood","naptime"));
 
-    //Method which reads data form directory
+    /**
+     *
+     * @param directoryname
+     * Method which reads data form directory and also saves it in the MongoDB
+     */
     public void processdata(String directoryname){
         JSONParser jsonParser=new JSONParser();
 
@@ -70,6 +74,12 @@ public class DataProcessing {
 
     }
 
+    /**
+     *
+     * @param activities
+     * @return As only ("login","logout","teabreak","lunchbreak","gamemood","naptime")
+     * above activities are allowed ,this method filters out the invalid actitivtes
+     */
     public List<Activity_> validatedata(List<Activity_> activities){
 
         boolean valid=false;
@@ -89,6 +99,12 @@ public class DataProcessing {
         return activities;
     }
 
+    /**
+     *
+     * @param strings
+     * @return counts the occurences of activitires in the list
+     * supplied as parameter and returns the filtered list
+     */
     public List<SelectedActivities> counter(List<String> strings)
     {
         List<SelectedActivities> selectedActivities=new ArrayList<>();
